@@ -1,0 +1,489 @@
+/* === ESTILOS GENERALES === */
+html{
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f3f3;
+    color: #1C3245; /* Color del texto */
+    line-height: 1.6;
+}
+
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* === HEADER === */
+header { 
+    background: url('img/hero1.jpg') no-repeat center center/cover;
+    transition: background-image 2s ease-in-out;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #1C3245;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 4rem;
+    margin-bottom: 10px;
+    text-shadow: -1px 0 #1C3245, 0 1px #1C3245, 1px 0 #1C3245, 0 -1px #1C3245;
+}
+
+header p {
+    color: #fff;
+    font-size: 1.5rem;
+    text-shadow: -1px 0 #1C3245, 0 1px #1C3245, 1px 0 #1C3245, 0 -1px #1C3245;
+}
+
+.cta {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f8c52e; /* Color del botón actualizado */
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+    margin-top: 40px;
+}
+
+.cta:hover {
+    background-color: #E69A00; /* Un tono más oscuro de amarillo naranjoso */
+}
+
+/* === NAVIGATION === */
+nav ul {
+    background: #1C3245; /* Azul fuerte */
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f8c52e; /* Cambia el color de hover a #f8c52e */
+}
+
+/* === SECCIÓN INICIO === */
+#inicio {
+    text-align: center;
+}
+
+#inicio h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#inicio p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* === SECCIÓN CLASES === */
+#clases {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.clases-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.clase {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 30%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+.clase img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease; /* Agrega la transición para la animación */
+}
+.clase img:hover, .membresia img:hover {
+    transform: scale(1.05); /* Incrementa el tamaño de la imagen cuando el mouse pasa por encima */
+}
+
+/* === SECCIÓN SUCURSALES === */
+.sucursales {
+    padding: 50px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar contenido horizontalmente */
+}
+
+.sucursal {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrar contenido dentro de cada sucursal */
+    flex-direction: row;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin-bottom: 30px;
+    padding: 20px;
+    width: 80%; /* Asegurar que las sucursales no ocupen todo el ancho */
+}
+
+.sucursal-imagen img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.sucursal-info {
+    margin-left: 30px;
+    text-align: left;
+}
+
+.sucursal-info h2 {
+    font-size: 1.8rem;
+    color: #1C3245;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.sucursal-info p {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.sucursal-info a {
+    color: #1C3245;
+    text-decoration: none;
+}
+
+.sucursal-info i {
+    margin-right: 10px;
+    color: #1C3245;
+}
+
+.sucursal-info .servicios {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.sucursal-info .servicios i {
+    font-size: 1.5rem;
+    color: #1C3245;
+}
+
+/* === SECCIÓN MEMBRESÍAS === */
+.membresias {
+     padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #f9f9f9;
+    gap: 30px;
+}
+
+.membresia {
+    background-color: #fff;
+    border: 2px solid #1C3245;
+    border-radius: 10px;
+    padding: 30px;
+    width: 40%;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.membresia:hover {
+    transform: scale(1.05);
+}
+
+.membresia h3 {
+    font-size: 1.5rem;
+    color: #1C3245;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.membresia h2 {
+    font-size: 2.5rem;
+    color: #1C3245;
+    margin-bottom: 5px;
+}
+
+.membresia p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.membresia ul {
+    list-style: none;
+    padding: 0;
+}
+
+.membresia ul li {
+    font-size: 1rem;
+    color: #1C3245;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+
+.membresia ul li i {
+    color: #f8c52e;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* === MEDIA QUERIES === */
+
+/* Para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .membresias {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .membresia {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+    header{
+        background-color: #1C3245;
+    }
+}
+
+/* === SECCIÓN PROMOCIONES === */
+#promociones {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.promocion-banner {
+    margin: 20px 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    text-align: center; /* Centrar la imagen dentro del contenedor */
+}
+
+.promocion-banner img {
+    width: 80%; /* Ajuste de ancho al 80% */
+    height: auto;
+}
+
+/* === FOOTER === */
+footer {
+    background-color: #1C3245;
+    color: #fff;
+    text-align: center;
+    /* padding: 20px 0; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+footer p {
+    margin: 10px 0;
+    text-align: justify;
+    padding-left: 10px;
+}
+
+/* === LOGO FLOTANTE === */
+.logo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    transition: opacity 0.5s ease-in-out;  /* Transición suave */
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+/* === MEDIA QUERIES PARA RESPONSIVIDAD === */
+
+/* Tablets (pantallas entre 768px y 1024px) */
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 3rem;
+    }
+
+    .clase {
+        width: 45%;  /* Tarjetas más grandes para tablets */
+    }
+
+    .logo img {
+        width: 80px;  /* Reducir el tamaño del logo en tablets */
+    }
+}
+
+/* Teléfonos móviles (pantallas hasta 767px) */
+@media (max-width: 767px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+    }
+
+    .clases-container, .membresias-container {
+        flex-direction: column;  /* Apilar las tarjetas verticalmente en móviles */
+        align-items: center;
+    }
+
+    .clase, .membresia img {
+        width: 80%;  /* Hacer las tarjetas más grandes en móviles */
+        margin-bottom: 20px;  /* Añadir espacio entre las tarjetas */
+    }
+
+    .logo img {
+        width: 60px;  /* Logo más pequeño en móviles */
+    }
+
+    .cta {
+        font-size: 1rem;
+        margin-top: 400px;
+        padding: 10px 20px;
+        font-size:1.8rem ;
+    }
+
+    .sucursal {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .sucursal-imagen img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .sucursal-info {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .sucursal-info h2, .sucursal-info p {
+        text-align: center;
+    }
+}
+
+/* Ocultar el nav en pantallas de menos de 600px */
+@media (max-width: 600px) {
+    nav {
+        display: none;
+    }
+    header{
+        background-image:url(img/hero-pantalla-ch.webp);
+        /* background-repeat: no-repeat; */
+        /* background-size:cover; */
+        /* background-position: center; */
+    }
+
+
+}
+
+/* Redes sociales en el header */
+.social-icons {
+    position: absolute;
+    bottom: 20px; /* A 20px del fondo del header */
+    right: 20px; /* A 20px del lado derecho */
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #fff; /* Color de los iconos en blanco */
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: transform 0.3s ease, color 0.3s ease; /* Transición para la animación */
+}
+
+.social-icons a:hover {
+    color: #f8c52e; /* Cambia el color al pasar el mouse */
+    transform: scale(1.2); /* Aumenta el tamaño del icono al hacer hover */
+}
+.social-icons a img:hover {
+    color: #f8c52e; /* Cambia el color al pasar el mouse */
+    transform: scale(1.2) ; /* Aumenta el tamaño del icono al hacer hover */
+    transition: transform 0.1s;
+}
+
+/* Opcional: para hacer que los iconos floten a la derecha */
+header {
+    position: relative;
+}
+
+.social-icons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+
+/* Redes sociales en el footer */
+.social-icons-footer {
+    margin-top: 20px;
+    text-align: center; /* Centrar los iconos */
+}
+
+.social-icons-footer a {
+    text-decoration: none;
+    color: #fff; /* Color de los iconos en blanco */
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: transform 0.3s ease, color 0.3s ease; /* Transición para la animación */
+}
+
+.social-icons-footer a img:hover {
+    color: #f8c52e; /* Cambia el color al pasar el mouse */
+    transform: scale(1.2); /* Aumenta el tamaño del icono al hacer hover */
+}
+
+
+/* PANTALLA XXL */
+@media (min-width: 2300px) {
+.sucursal-imagen img {
+    width: 800px;
+    height: AUTO;
+    border-radius: 10px;
+}}
